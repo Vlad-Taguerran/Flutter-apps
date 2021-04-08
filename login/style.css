@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 60%;
+
+}
+.container{
+  display: flex;
+  background-color: rgb(22, 22, 22);
+  height: 100vh;
+}
+.card{
+  border-radius: 8%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2c2c2d;
+  width: 35vw;
+  height: 80vh;
+  animation-name: changeColor;
+  animation-duration:  5s;
+  animation-iteration-count: infinite;
+}
+
+.mx{
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.neon{
+  box-shadow: 0px 0px 8px blue, 0px 0px 7px rgb(161, 161, 247);
+  
+}
+.card-image,img{
+  padding: 10%;
+  max-width: 80px;
+  margin-top: 1.5rem;
+  box-shadow: inset -0px -0px 30px -5px blue, inset 0px 0px 15px -5px  rgb(160, 160, 236);
+  animation-name: changeColor;
+  animation-duration:  5s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  
+}
+
+.input-container{
+  margin-top: 10%;
+  display: flex;
+  flex-flow: column;
+}
+.input-container label{
+  color: rgb(108, 107, 107);
+  font-weight:700 ;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.input-container input{
+  width: 20vw;
+  height: 4vh;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+.btn{
+  color: aliceblue;
+  border-width: 1px;
+  border-radius: 15px;
+  margin-top: 10rem;
+  width: 10vw;
+  height: 7vh;
+  align-self: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: rgba(156, 1, 122, 0.295);
+  box-shadow: 0px 0px 7px rgba(156, 1, 123, 0.925) ;
+}
+.btn:hover{
+ box-shadow: 0px 0px 10px rgba(156, 1, 123, 0.925), 0px 0px 8px rgba(221, 1, 111, 0.925);
+ background-color: rgba(255, 9, 181, 0.562);
+ cursor: pointer;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media(max-width: 790px){
+
+  .card{
+    width: 90vw;
+  }
+  .btn{
+    width: 10.0em;
+  }
+  .input-container input {
+    width: 30.0rem;
+    margin-top: 1.0rem;
+  }
+}
+@media(orientation: landscape)AND (max-width: 790px){
+  #form{
+    
+    flex-shrink: 10px;
+  }
+  .btn{
+    height: 10vh;
+  }
+  .input-container{
+    margin-top: 0.5rem;
+  }
+  .input-container input{
+    height: 2.6rem;
+  }
+  .input-container label{
+    margin: 0px;
+  }
+  .btn{
+    margin-top: 1.6rem;
+  }
+  .card-image,img{
+    width: 3.6rem;
+  }
+}
+@keyframes changeColor{
+  0%{box-shadow: inset -0px -0px 30px -5px #06fd89, inset 0px 0px 15px -5px rgb(145, 145, 202);}
+  25%{box-shadow: inset -0px -0px 30px -5px #00dbff, inset 0px 0px 15px -5px rgb(241, 107, 230);}
+  75%{box-shadow: inset -0px -0px 30px -5px #060afd, inset 0px 0px 15px -5px rgb(107, 203, 241);}
+  100%{box-shadow: inset -0px -0px 30px -5px #00ffdb, inset 0px 0px 15px -5px rgb(148, 0, 44);}
+  
+}

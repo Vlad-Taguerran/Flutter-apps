@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+  <title>login</title>
+</head>
+
+<body>
+  <div class="container mx">
+    <div class='card neon'>
+      <div class='card-img' id="card">
+        <img src="./avatar.png" alt="avatar" id="avatar">
+      </div>
+      <form onsubmit="validate(event)" action="#" method="POST" id="form">
+        <div class="input-container">
+          <label for="login">Login</label>
+          <input type="email" name="login" id="login" placeholder="Digite seu email">
+        </div>
+        <div class="input-container">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="teste">
+        </div>
+        <button type="submit" onsubmit="validate(event)" class="btn">confirmar</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="./validate.js"></script>
+</body>
+
+</html>
